@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeTrungHauCV</title>
+    <!-- FONTS -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <style>
+        * {
+            box-sizing: border-box;
+            transition: 0.35s ease;
+        }
+
+        .rela-block {
+            display: block;
+            position: relative;
+            margin: auto;
+
+        }
+
+        .rela-inline {
+            display: inline-block;
+            position: relative;
+            margin: auto;
+
+        }
+
+        .floated {
+            display: inline-block;
+            position: relative;
+            margin: false;
+
+            float: left;
+        }
+
+        .abs-center {
+            display: false;
+            position: absolute;
+            margin: false;
+            top: 50%;
+            left: 50%;
+            right: false;
+            bottom: false;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 88%;
+        }
+
+        body {
+            font-family: 'Open Sans';
+            font-size: 18px;
+            letter-spacing: 0px;
+            font-weight: 400;
+            line-height: 28px;
+            background: url("http://kingofwallpapers.com/leaves/leaves-016.jpg") right no-repeat;
+            background-size: cover;
+        }
+
+        body:before {
+            content: "";
+            display: false;
+            position: fixed;
+            margin: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.92);
+        }
+
+        .caps {
+            text-transform: uppercase;
+        }
+
+        .justified {
+            text-align: justify;
+        }
+
+        p.light {
+            color: #777;
+        }
+
+        h2 {
+            font-family: 'Open Sans';
+            font-size: 30px;
+            letter-spacing: 5px;
+            font-weight: 600;
+            line-height: 40px;
+            color: #000;
+        }
+
+        h3 {
+            font-family: 'Open Sans';
+            font-size: 21px;
+            letter-spacing: 1px;
+            font-weight: 600;
+            line-height: 28px;
+            color: #000;
+        }
+
+        .page {
+            width: 90%;
+            max-width: 1200px;
+            margin: 80px auto;
+            background-color: #fff;
+            box-shadow: 6px 10px 28px 0px rgba(0, 0, 0, 0.4);
+        }
+
+        .top-bar {
+            height: 220px;
+            background-color: #848484;
+            color: #fff;
+        }
+
+        .name {
+            display: false;
+            position: absolute;
+            margin: false;
+            top: false;
+            left: calc(350px + 5%);
+            right: 0;
+            bottom: 0;
+            height: 120px;
+            text-align: center;
+            font-family: 'Raleway';
+            font-size: 58px;
+            letter-spacing: 8px;
+            font-weight: 100;
+            line-height: 60px;
+        }
+
+        .name div {
+            width: 94%;
+        }
+
+        .side-bar {
+            display: false;
+            position: absolute;
+            margin: false;
+            top: 60px;
+            left: 5%;
+            right: false;
+            bottom: 0;
+            width: 350px;
+            background-color: #f7e0c1;
+            padding: 320px 30px 50px;
+        }
+
+        .mugshot {
+            display: false;
+            position: absolute;
+            margin: false;
+            top: 50px;
+            left: 70px;
+            right: false;
+            bottom: false;
+            height: 210px;
+            width: 210px;
+        }
+
+        .mugshot .logo {
+            margin: -23px;
+        }
+
+        .logo {
+            display: false;
+            position: absolute;
+            margin: false;
+            top: 0;
+            left: 0;
+            right: false;
+            bottom: false;
+            z-index: 100;
+            margin: 0;
+            color: #000;
+            height: 250px;
+            width: 250px;
+        }
+
+        .logo .logo-svg {
+            height: 100%;
+            width: 100%;
+            stroke: #000;
+            cursor: pointer;
+        }
+
+        .logo .logo-text {
+            display: false;
+            position: absolute;
+            margin: false;
+            top: 58%;
+            right: 16%;
+            cursor: pointer;
+            font-family: "Montserrat";
+            font-size: 55px;
+            letter-spacing: 0px;
+            font-weight: 400;
+            line-height: 58.333333333333336px;
+        }
+
+        .social {
+            padding-left: 60px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        .social:before {
+            content: "";
+            display: false;
+            position: absolute;
+            margin: false;
+            top: -4px;
+            left: 10px;
+            right: false;
+            bottom: false;
+            height: 35px;
+            width: 35px;
+            background-size: cover !important;
+        }
+
+        .social.twitter:before {
+            background: url("https://cdn3.iconfinder.com/data/icons/social-media-2026/60/Socialmedia_icons_Twitter-07-128.png") center no-repeat;
+        }
+
+        .social.pinterest:before {
+            background: url("https://cdn3.iconfinder.com/data/icons/social-media-2026/60/Socialmedia_icons_Pinterest-23-128.png") center no-repeat;
+        }
+
+        .social.linked-in:before {
+            background: url("https://cdn3.iconfinder.com/data/icons/social-media-2026/60/Socialmedia_icons_LinkedIn-128.png") center no-repeat;
+        }
+
+        .side-header {
+            font-family: 'Open Sans';
+            font-size: 18px;
+            letter-spacing: 4px;
+            font-weight: 600;
+            line-height: 28px;
+            margin: 100px auto 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #888;
+        }
+
+        .list-thing {
+            padding-left: 25px;
+            margin-bottom: 10px;
+        }
+
+        .content-container {
+            margin-right: 0;
+            width: calc(95% - 350px);
+            padding: 25px 40px 50px;
+        }
+
+        .content-container>* {
+            margin: 0 auto 25px;
+        }
+
+        .content-container>h3 {
+            margin: 0 auto 5px;
+        }
+
+        .content-container>p.long-margin {
+            margin: 0 auto 50px;
+        }
+
+        .title {
+            width: 80%;
+            text-align: center;
+        }
+
+        .separator {
+            width: 240px;
+            height: 2px;
+            background-color: #999;
+        }
+
+        .greyed {
+            background-color: #ddd;
+            width: 100%;
+            max-width: 580px;
+            text-align: center;
+            font-family: 'Open Sans';
+            font-size: 18px;
+            letter-spacing: 6px;
+            font-weight: 600;
+            line-height: 28px;
+        }
+
+        .myCssAddTimeH3 {
+            display: flex;
+            justify-content: space-between;
+            margin: 0;
+        }
+
+        h3 {
+            margin-bottom: 0;
+        }
+
+        @media screen and (max-width: 1150px) {
+            .name {
+                color: #fff;
+                font-family: 'Raleway';
+                font-size: 38px;
+                letter-spacing: 6px;
+                font-weight: 100;
+                line-height: 48px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- PAGE STUFF -->
+    <div class="rela-block page">
+        <div class="rela-block top-bar">
+            <div class="caps name">
+                <div class="abs-center">Lê Trung Hậu</div>
+            </div>
+        </div>
+        <div class="side-bar">
+            <div class="mugshot">
+                <div class="logo">
+
+                    <img class="rela-block logo-svg" src="hau.png" alt="">
+
+                </div>
+            </div>
+            <p>Address: Linh Trung Ward, Thu Duc District, Ho Chi Minh City</p>
+            <p>Phone: 036 701 6872</p>
+            <p>Email: leetrunghaau@gmail.com</p><br>
+
+            <p class="rela-block caps side-header">Education</p>
+            <p class="rela-block list-thing">Ho Chi Minh City University of Technology and Education</p>
+            <p class="rela-block list-thing">Major: Information Technology</p>
+            <p class="rela-block list-thing">GPA: 7.1</p>
+            <p class="rela-block caps side-header">Hard skills</p>
+            <p class="rela-block list-thing">C++</p>
+            <p class="rela-block list-thing">Java</p>
+            <p class="rela-block list-thing">JavaScript</p>
+            <p class="rela-block list-thing">MySQL</p>
+            <p class="rela-block list-thing">PostgreSQL</p>
+            <p class="rela-block list-thing">Java MVC</p>
+            <p class="rela-block list-thing">Java Spring boot</p>
+
+            <p class="rela-block caps side-header">Soft skills</p>
+            <p class="rela-block list-thing">Team work</p>
+            <p class="rela-block list-thing">Time management</p>
+            <p class="rela-block list-thing">Searching Skills</p>
+
+
+        </div>
+        <div class="rela-block content-container">
+            <h2 class="rela-block caps title">intern java web backend</h2>
+            <div class="rela-block separator"></div>
+            <div class="rela-block caps greyed">Summary & Career Objective</div>
+            <p class="long-margin">- Seeking an environment that fosters both personal and professional development,
+                driven by a commitment to growth and dedication. <br>
+                - Eager to acquire new knowledge and skills through training opportunities and continuously enhance
+                proficiency in my field. <br>
+                - To actively engage in a learning-driven environment that promotes skill development and professional
+                growth. <br>
+                - To leverage training opportunities to expand expertise and excel in my chosen field of work.
+            </p>
+            <div class="rela-block caps greyed">activity</div>
+            <div class="myCssAddTimeH3">
+                <h3>Technical contests of HCMUTE</h3>
+                <h3>11/2019</h3>
+            </div>
+
+            <p class="light">Contestant</p>
+            <p class="justified">First Prize Winner, BattleBots (hosted by SRC of HCMUTE, 2019):
+                Demonstrated expertise in mechanical and electrical design, as well as embedded programming,
+                by developing a high-performance line detector robot that efficiently follows a predefined path.
+            </p>
+            <div class="myCssAddTimeH3">
+                <h3>Scientific researching club for HCMUTE</h3>
+                <h3>10/2019 - Now</h3>
+            </div>
+
+            <p class="light">Instructor</p>
+            <p class="justified">
+                - Training basic knowledge, experience mechanical and electrical designing and embeded program to 1st
+                and 2nd year student. <br>
+                - Support organizing some mechanical-elect contents in HCMUTE:
+                Line following robot, Green boot,
+                Engage in STEAM education competition for Ho Chi Minh City students,
+                leveraging expertise to foster innovative and interdisciplinary learning...
+            </p>
+            <div class="myCssAddTimeH3">
+                <h3>Automatic vote counting project for HCMUTE</h3>
+                <h3>6/2022 - Now</h3>
+            </div>
+            <p class="light">Developer</p>
+            <p class="justified">
+                - Lead the development of an automated vote counting device with real-time display,
+                implemented at HCMUTE Union Congress and adopted by universities, unions, and provinces. <br>
+                - Link: agbc.com
+            </p>
+            <div class="rela-block caps greyed">project</div>
+            <div class="myCssAddTimeH3">
+                <h3>E-commerce web api</h3>
+                <h3>2/2023 - 6/2023</h3>
+            </div>
+            <p class="light">Developer</p>
+            <p class="justified">- I successfully completed a project as part of my coursework, Java-based API for an
+                e-commerce web application, incorporating Spring Boot, JPA, and JWT. Integrated PostgreSQL for efficient
+                data management and utilized Docker for seamless deployment.
+            </p>
+            <p class="justified">- Link: https://github.com/leetrunghaau/e-commerce_web_api</p>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
