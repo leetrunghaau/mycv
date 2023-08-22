@@ -89,6 +89,18 @@
             color: #777;
         }
 
+        p.Dark {
+            color: #000;
+            font-style: italic;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        p {
+            margin-left: 27px;
+        }
+
         h2 {
             font-family: 'Open Sans';
             font-size: 30px;
@@ -261,8 +273,7 @@
             padding: 25px 40px 50px;
         }
 
-        .content-container>* {
-        }
+        .content-container>* {}
 
         .content-container>h3 {
             margin: 0 auto 5px;
@@ -336,10 +347,10 @@
 
                 </div>
             </div>
-            <p>Address: Linh Trung Ward, Thu Duc District, Ho Chi Minh City</p>
-            <p>Gender: male</p>
+            <p>Address: Thu Duc City, Ho Chi Minh City</p>
+            <p>Gender: Male</p>
             <p>Phone: 036 701 6872</p>
-            <p>Date of birth: 20/01/2001</p>
+            <p>Date of Birth: 20/01/2001</p>
             <p>Email: leetrunghaau@gmail.com</p><br>
 
             <p class="rela-block caps side-header">Education</p>
@@ -356,9 +367,9 @@
             <p class="rela-block list-thing">Java Spring boot</p>
 
             <p class="rela-block caps side-header">Soft skills</p>
-            <p class="rela-block list-thing">Team work</p>
+            <p class="rela-block list-thing">Teamwork</p>
             <p class="rela-block list-thing">Time management</p>
-            <p class="rela-block list-thing">Searching Skills</p>
+            <p class="rela-block list-thing">Problem-solving</p>
 
 
         </div>
@@ -370,27 +381,27 @@
                 - Eager to acquire new knowledge and skills through training opportunities and continuously enhance
                 proficiency in my field. <br>
             </p>
-            <p class="justified"> 
+            <p class="justified">
                 - To actively engage in a learning-driven environment that promotes skill development
                 and professional
                 growth. <br>
             </p>
-            <p class="justified"> 
+            <p class="justified">
                 - To leverage training opportunities to expand expertise and excel in my chosen field
                 of work.
             </p>
             <div class="rela-block caps greyed">activity</div>
             <div class="myCssAddTimeH3">
-                <h3>Scientific researching club for HCMUTE</h3>
+                <h3>Scientific Researching Club for HCMUTE</h3>
                 <h3>10/2019 - Now</h3>
             </div>
 
             <p class="light">Instructor</p>
             <p class="justified">
-                - Training basic knowledge, experience mechanical and electrical designing and embeded program to 1st
-                and 2nd year student.
+                - Training basic knowledge, and experience in mechanical and electrical designing and embedded programs
+                to 1st and 2nd-year students.
             </p>
-            <p class="justified"> 
+            <p class="justified">
                 - Support organizing some mechanical-elect contents in HCMUTE:
                 Line following robot,
                 Engage in STEAM education competition for Ho Chi Minh City students,...
@@ -409,7 +420,8 @@
                 <h3>E-commerce web</h3>
                 <h3>7/2023 - Now</h3>
             </div>
-            <p class="light">Back-end developer</p>
+            <p class="light">Back-end Developer</p>
+            <p onclick="redirectToGithub()" class="Dark">https://github.com/leetrunghaau/mathsolver-api</p>
             <p>- Developed e-commerce platform for STEM education firm. <br>
                 - Enabled sales of electronics and STEM products. <br>
                 - Utilized Node.js, Express, and MySQL.<br>
@@ -417,11 +429,16 @@
                 - Streamlined deployment with Docker.<br>
                 - Strengthened skills in key technologies.<br>
             </p>
-            <p>- Source: https://github.com/leetrunghaau/mathsolver-api</p>
 
 
         </div>
     </div>
+    <script>
+        function redirectToGithub() {
+            window.location.href = "https://github.com/leetrunghaau/mathsolver-api";
+        }
+
+    </script>
 </body>
 
 </html>
