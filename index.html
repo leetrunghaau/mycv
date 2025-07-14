@@ -19,34 +19,29 @@
             display: block;
             position: relative;
             margin: auto;
-            /* margin-bottom: 15px; */
-            /* margin-top: 40px; */
-
         }
 
         .rela-inline {
             display: inline-block;
             position: relative;
             margin: auto;
-
         }
 
         .floated {
             display: inline-block;
             position: relative;
-            margin: false;
-
+            margin: 0;
             float: left;
         }
 
         .abs-center {
-            display: false;
+            display: block;
             position: absolute;
-            margin: false;
+            margin: 0;
             top: 50%;
             left: 50%;
-            right: false;
-            bottom: false;
+            right: auto;
+            bottom: auto;
             transform: translate(-50%, -50%);
             text-align: center;
             width: 88%;
@@ -60,11 +55,13 @@
             line-height: 28px;
             background: url("http://kingofwallpapers.com/leaves/leaves-016.jpg") right no-repeat;
             background-size: cover;
+            margin: 0;
+            padding: 0;
         }
 
         body:before {
             content: "";
-            display: false;
+            display: block;
             position: fixed;
             margin: 0;
             top: 0;
@@ -129,19 +126,21 @@
             margin: 80px auto;
             background-color: #fff;
             box-shadow: 6px 10px 28px 0px rgba(0, 0, 0, 0.4);
+            position: relative;
         }
 
         .top-bar {
             height: 220px;
             background-color: #848484;
             color: #fff;
+            position: relative;
         }
 
         .name {
-            display: false;
+            display: block;
             position: absolute;
-            margin: false;
-            top: false;
+            margin: 0;
+            top: 0;
             left: calc(350px + 5%);
             right: 0;
             bottom: 0;
@@ -159,26 +158,27 @@
         }
 
         .side-bar {
-            display: false;
+            display: block;
             position: absolute;
-            margin: false;
+            margin: 0;
             top: 60px;
             left: 5%;
-            right: false;
+            right: auto;
             bottom: 0;
             width: 350px;
             background-color: #f7e0c1;
             padding: 320px 30px 50px;
+            z-index: 10;
         }
 
         .mugshot {
-            display: false;
+            display: block;
             position: absolute;
-            margin: false;
+            margin: 0;
             top: 50px;
             left: 70px;
-            right: false;
-            bottom: false;
+            right: auto;
+            bottom: auto;
             height: 210px;
             width: 210px;
         }
@@ -188,15 +188,14 @@
         }
 
         .logo {
-            display: false;
+            display: block;
             position: absolute;
-            margin: false;
+            margin: 0;
             top: 0;
             left: 0;
-            right: false;
-            bottom: false;
+            right: auto;
+            bottom: auto;
             z-index: 100;
-            margin: 0;
             color: #000;
             height: 250px;
             width: 250px;
@@ -207,12 +206,13 @@
             width: 100%;
             stroke: #000;
             cursor: pointer;
+            object-fit: cover;
         }
 
         .logo .logo-text {
-            display: false;
+            display: block;
             position: absolute;
-            margin: false;
+            margin: 0;
             top: 58%;
             right: 16%;
             cursor: pointer;
@@ -231,13 +231,13 @@
 
         .social:before {
             content: "";
-            display: false;
+            display: block;
             position: absolute;
-            margin: false;
+            margin: 0;
             top: -4px;
             left: 10px;
-            right: false;
-            bottom: false;
+            right: auto;
+            bottom: auto;
             height: 35px;
             width: 35px;
             background-size: cover !important;
@@ -275,9 +275,8 @@
             margin-right: 0;
             width: calc(95% - 350px);
             padding: 25px 40px 50px;
+            margin-left: calc(350px + 5%);
         }
-
-        .content-container>* {}
 
         .content-container>h3 {
             margin: 0 auto 5px;
@@ -316,6 +315,7 @@
             display: flex;
             justify-content: space-between;
             margin: 0;
+            flex-wrap: wrap;
         }
 
         h3 {
@@ -326,7 +326,94 @@
             white-space: nowrap;
         }
 
-        @media screen and (max-width: 1150px) {
+        /* Mobile Responsive Styles */
+        @media screen and (max-width: 768px) {
+            .page {
+                width: 95%;
+                margin: 20px auto;
+            }
+
+            .top-bar {
+                height: 120px;
+            }
+
+            .name {
+                position: static;
+                height: auto;
+                padding: 20px;
+                font-size: 28px;
+                letter-spacing: 3px;
+                line-height: 32px;
+            }
+
+            .side-bar {
+                position: static;
+                width: 100%;
+                padding: 20px;
+                background-color: #f7e0c1;
+            }
+
+            .mugshot {
+                position: static;
+                text-align: center;
+                margin-bottom: 20px;
+                height: auto;
+                width: auto;
+            }
+
+            .logo {
+                position: static;
+                height: 150px;
+                width: 150px;
+                margin: 0 auto;
+            }
+
+            .content-container {
+                width: 100%;
+                margin-left: 0;
+                padding: 20px;
+            }
+
+            .justified {
+                margin: 0px 15px 10px 15px;
+                font-size: 16px;
+            }
+
+            .myCssAddTimeH3 {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .myCssAddTimeH3 h3 {
+                font-size: 18px;
+            }
+
+            h2 {
+                font-size: 20px;
+                letter-spacing: 3px;
+            }
+
+            .greyed {
+                font-size: 16px;
+                letter-spacing: 3px;
+            }
+
+            p {
+                margin-left: 15px;
+                font-size: 16px;
+            }
+
+            p.light {
+                margin-left: 15px;
+            }
+
+            p.Dark {
+                margin-left: 25px;
+                font-size: 14px;
+            }
+        }
+
+        @media screen and (max-width: 1150px) and (min-width: 769px) {
             .name {
                 color: #fff;
                 font-family: 'Raleway';
@@ -334,6 +421,35 @@
                 letter-spacing: 6px;
                 font-weight: 100;
                 line-height: 48px;
+            }
+
+            .content-container {
+                width: calc(95% - 300px);
+                margin-left: calc(300px + 5%);
+            }
+
+            .side-bar {
+                width: 300px;
+            }
+
+            .name {
+                left: calc(300px + 5%);
+            }
+        }
+
+        /* Tablet specific adjustments */
+        @media screen and (max-width: 1024px) and (min-width: 769px) {
+            .justified {
+                font-size: 16px;
+                margin: 0px 20px 10px 20px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            h3 {
+                font-size: 19px;
             }
         }
     </style>
@@ -350,9 +466,7 @@
         <div class="side-bar">
             <div class="mugshot">
                 <div class="logo">
-
-                    <img class="rela-block logo-svg" src="hau.png" alt="">
-
+                    <img class="rela-block logo-svg" src="hau.png" alt="Le Trung Hau">
                 </div>
             </div>
             <p>Address: Thu Duc City, Ho Chi Minh City</p>
@@ -364,45 +478,42 @@
             <p class="rela-block caps side-header">Education</p>
             <p class="rela-block list-thing">Ho Chi Minh City University of Technology and Education</p>
             <p class="rela-block list-thing">Major: Information Technology</p>
-            <p class="rela-block list-thing">GPA: 7.1</p>
+            <p class="rela-block list-thing">GPA: 7.3</p>
+
             <p class="rela-block caps side-header">Hard skills</p>
-            <p class="rela-block list-thing">C++</p>
-            <p class="rela-block list-thing">.Net</p>
-            <p class="rela-block list-thing">JavaScript</p>
-            <p class="rela-block list-thing">Node.js</p>
-            <p class="rela-block list-thing">MySQL</p>
+            <p class="rela-block list-thing">Node.js & Express.js</p>
+            <p class="rela-block list-thing">React & Next.js</p>
+            <p class="rela-block list-thing">JavaScript (ES6+)</p>
+            <p class="rela-block list-thing">SQL (MySQL, SQL Server)</p>
+            <p class="rela-block list-thing">HTML5 & CSS3</p>
+            <p class="rela-block list-thing">Git</p>
 
             <p class="rela-block caps side-header">Soft skills</p>
             <p class="rela-block list-thing">Teamwork</p>
             <p class="rela-block list-thing">Time management</p>
             <p class="rela-block list-thing">Problem-solving</p>
-
-
         </div>
+
         <div class="rela-block content-container">
-            <h2 class="rela-block caps title">intern/fresher web developer</h2>
+            <h2 class="rela-block caps title">fresher web developer</h2>
             <div class="rela-block separator"></div>
+
             <div class="rela-block caps greyed">ABOUT MYSELF</div>
             <p class="justified">
-                - Experienced software developer specializing in backend development with Express.js, .NET.
+                - Full-stack developer specializing in the MERN stack (Node.js, Express.js, React).
                 <br>
-                - Skilled in working with MySQL, SQL Server, and NoSQL databases.
+                - Expertise in building scalable backend APIs and dynamic front-end applications with Next.js.
                 <br>
-                - Familiar with Firebase and Firestore.
+                - Proficient with SQL databases (MySQL, SQL Server) and familiar with NoSQL concepts.
                 <br>
-                - Familiar in frontend technologies like React.js, Next.js, Ant Design, and NextUI Design, HTML, CSS.
-                <br>
-                - Experienced in deploying systems on Linux, with knowledge of Apache, Nginx, domains, and openSSL.
-                <br>
-                - Versatile and capable of delivering comprehensive end-to-end solutions.
-                <br>
+                - Experienced in delivering end-to-end solutions from development to deployment.
             </p>
+
             <div class="rela-block caps greyed">experience</div>
             <div class="myCssAddTimeH3">
-                <h3> Information Technology EVN HCMC</h3>
+                <h3>Information Technology EVN HCMC</h3>
                 <h3>09/2023 - 12/2023</h3>
             </div>
-
             <p class="light">Full stack intern</p>
             <p>
                 - Contributed to real-world projects at the company.
@@ -418,12 +529,24 @@
                 - Skills utilized: C# .NET, React, SQL Server, Professional Git Management.
             </p>
 
+            <div class="myCssAddTimeH3">
+                <h3>VIETMAP Co., Ltd.</h3>
+                <h3>07/2024 - 10/2024</h3>
+            </div>
+            <p class="light">Developer intern</p>
+            <p>
+                - Developed custom QGIS plugins and utilized Python scripts for advanced geospatial (GIS) data processing and automation.
+                <br>
+                - Researched and implemented Kart, a Git-based version control system, to enhance the management and versioning of geospatial datasets.
+                <br>
+                - Contributed to the full data lifecycle, including data collection, cleansing, and processing, ensuring high levels of accuracy and integrity.
+            </p>
+
             <div class="rela-block caps greyed">activity</div>
             <div class="myCssAddTimeH3">
                 <h3>Scientific Researching Club for HCMUTE</h3>
                 <h3>10/2019 - 10/2023</h3>
             </div>
-
             <p class="light">Instructor</p>
             <p class="justified">
                 - Training basic knowledge, and experience in mechanical and electrical designing and embedded programs
@@ -437,8 +560,9 @@
             <p class="light">Developer</p>
             <p class="justified">
                 - Lead the development of an automated vote counting device with real-time display,
-                implemented at HCMUTE Union Congress and adopted by universities, unions, and provinces. <br>
+                implemented at HCMUTE Union Congress and adopted by universities, unions, and provinces.
             </p>
+
             <div class="rela-block caps greyed">project</div>
             <div class="myCssAddTimeH3">
                 <h3>E-commerce web</h3>
@@ -453,15 +577,13 @@
                 - Streamlined deployment with Docker.<br>
                 - Strengthened skills in key technologies.<br>
             </p>
-
-
         </div>
     </div>
+
     <script>
         function redirectToGithub() {
-            window.location.href = "https://github.com/leetrunghaau/mathsolver-api";
+            window.open("https://github.com/leetrunghaau/mathsolver-api", "_blank");
         }
-
     </script>
 </body>
 
