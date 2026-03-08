@@ -22,10 +22,10 @@
         body {
             max-width: 800px;
             margin: 0 auto;
-            padding: 30px 40px;
+            padding: 20px 25px;
             background: #fff;
             font-size: 14px;
-            line-height: 1.6;
+            line-height: 1.45;
         }
 
         h1 {
@@ -62,18 +62,26 @@
         }
 
         .header img {
-            width: 200px;
+            width: 120px;
             border-radius: 6px;
         }
 
+        .info {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4px 20px;
+        }
+
         .info-item {
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4px 20px;
             font-size: 13px;
             color: var(--gray);
         }
 
         .label {
-            width: 100px;
+            /*width: 80px;*/
             font-weight: bold;
             display: inline-block;
         }
@@ -83,7 +91,7 @@
         }
 
         section {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         section p {
@@ -97,7 +105,7 @@
         }
 
         ul li {
-            margin-bottom: 3px;
+            margin-bottom: 2px;
         }
 
         strong {
@@ -115,10 +123,24 @@
             font-style: italic;
         }
 
+        .break-page {
+            break-before: page;
+        }
+
         /* In 1 trang A4 */
         @page {
             size: A4;
             margin-top: 5mm;
+        }
+
+        @media (max-width: 768px) {
+            .info {
+                display: block;
+            }
+
+            .header img {
+                width: 200px;
+            }
         }
     </style>
 </head>
@@ -128,21 +150,39 @@
         <img src="hau.png" alt="Le Trung Hau" />
         <div>
             <h1>LE TRUNG HAU</h1>
-            <h3>Full-Stack developer</h3>
+            <h3>Full-Stack Developer (Backend-focused)</h3>
             <div class="info">
-                <div class="info-item"><span class="label">Dob:</span><span class="value">20/01/2001</span></div>
-                <div class="info-item"><span class="label">Gender:</span><span class="value">Male</span></div>
-                <div class="info-item"><span class="label">Phone:</span><span class="value">036 701 6872</span></div>
-                <div class="info-item"><span class="label">Email:</span><span class="value">hault.dev@gmail.com</span>
+                <div>
+                    <div class="info-item"><span class="label">Gender:</span><span class="value">Male</span></div>
+                    <div class="info-item"><span class="label">Dob:</span><span class="value">20/01/2001</span></div>
+                    <div class="info-item"><span class="label">Phone:</span><span class="value">036 701 6872</span>
+                    </div>
                 </div>
-                <div class="info-item"><span class="label">Github:</span><span
-                        class="value">https://github.com/leetrunghaau</span>
-                </div>
-                <div class="info-item"><span class="label">Address:</span><span class="value">Ho Chi Minh City</span>
+                <div>
+                    <div class="info-item"><span class="label">Email:</span><span
+                            class="value">hault.dev@gmail.com</span>
+                    </div>
+                    <div class="info-item"><span class="label">Github:</span><span
+                            class="value">https://github.com/leetrunghaau</span>
+                    </div>
+                    <div class="info-item"><span class="label">Location:</span><span class="value">Ho Chi Minh
+                            City</span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <section>
+        <h2>Professional Summary</h2>
+        <ul>
+            <li>Backend-focused developer with experience building RESTful APIs using Node.js, Express, and relational
+                databases.</li>
+            <li>Experienced in designing backend services, database schemas, and containerized applications with Docker.
+            </li>
+            <li>Interested in backend engineering, scalable system design, and practical AI applications.</li>
+        </ul>
+    </section>
 
     <section>
         <h2>Experience</h2>
@@ -152,10 +192,9 @@
         </div>
         <p><strong>Full-stack Intern</strong></p>
         <ul>
-            <li>Participated in building an asset management system using .NET technology stack.</li>
-            <li>Developed backend services in C# for user authentication and authorization features.</li>
-            <li>Built and maintained RESTful API endpoints with ASP.NET Core.</li>
-            <li>Worked with SQL Server to write stored procedures and manage data efficiently.</li>
+            <li>Implemented authentication and authorization services using C# and ASP.NET Core.</li>
+            <li>Developed and integrated frontend components with backend APIs to support internal web applications.</li>
+            <li>Collaborated with team members on both backend services and frontend integration.</li>
 
         </ul>
         <div class="job-header">
@@ -164,16 +203,10 @@
         </div>
         <p><strong>Developer intern</strong></p>
         <ul>
-            <li>Developed custom QGIS plugins and utilized Python scripts for advanced geospatial (GIS) data processing
-                and
-                automation.</li>
-            <li>Researched and implemented Kart, a Git-based version control system, to enhance the management and
-                versioning of geospatial datasets.</li>
-            <li>Contributed to the full data lifecycle, including data collection, cleansing, and processing, ensuring
-                high
-                levels of
-                accuracy and integrity.</li>
-
+            <li>Developed custom QGIS plugins using Python to automate geospatial data processing workflows.</li>
+            <li>Implemented Python scripts for data transformation, validation, and geospatial analysis.</li>
+            <li>Researched and integrated Kart, a Git-based data version control system, for managing geospatial
+                datasets.</li>
         </ul>
     </section>
 
@@ -182,48 +215,22 @@
         <ul>
             <li><strong>Languages:</strong> JavaScript (ES6+), TypeScript</li>
             <li><strong>Backend:</strong> Node.js, Express.js, RESTful API Design</li>
-            <li><strong>Fontend:</strong> Reactjs, Nextjs</li>
+            <li><strong>Frontend:</strong> React.js, Next.js, HTML, CSS</li>
             <li><strong>Databases:</strong> MySQL, PostgreSQL</li>
-            <li><strong>Tools:</strong> Git, GitHub, Postman</li>
-            <li><strong>Others:</strong> Beyond core backend expertise, also proficient in frontend development (HTML,
-                CSS, React), object-oriented programming (OOP) principles, and C++.</li>
-
+            <li><strong>Tools:</strong> Git, GitHub, Docker, Postman</li>
         </ul>
     </section>
-
 
     <section>
         <h2>Education</h2>
         <div class="job-header">
             <h3>HCMC University of Technology and Education</h3>
         </div>
-        <p><strong>Major:</strong> Information Technology.</p>
+        <p>Bachelor of Information Technology.</p>
     </section>
 
-    <section style="margin-top: 15px;">
+    <section style="margin-top: 15px;" class="break-page">
         <h2>Personal Projects</h2>
-        <div style="margin-bottom: 15px;">
-            <div class="job-header">
-                <h3>Booking Care</h3>
-                <span>May 2025 - Jun 2025</span>
-            </div>
-            <p style="margin-top: 5px;">
-                <strong>Role:</strong> Backend Developer<br>
-                <strong>Description:</strong> The backend for a medical appointment booking system.
-            </p>
-            <ul>
-                <li><strong>Key Achievements:</strong> Developed a comprehensive medical appointment system with user,
-                    doctor, and appointment management. Implemented specialty/clinic management and file upload
-                    features.</li>
-                <li><strong>Technologies:</strong> Node.js, Sequelize, MySQL, Docker.</li>
-                <li><strong>Team Size:</strong> 2</li>
-                <li><strong>GitHub:</strong> <a
-                        href="https://github.com/leetrunghaau/booking_care_BE">https://github.com/leetrunghaau/booking_care_BE</a>
-                </li>
-
-            </ul>
-        </div>
-
         <div style="margin-bottom: 15px;">
             <div class="job-header">
                 <h3>Medly - Medical Chatbot</h3>
@@ -231,29 +238,41 @@
             </div>
             <p style="margin-top: 5px;">
                 <strong>Role:</strong> Developer<br>
-                <strong>Description:</strong> An intelligent Vietnamese medical chatbot designed to provide accurate and
-                contextually relevant information to user queries.
-            </p>
             <ul>
-                <li><strong>Key Achievements:</strong> Developed an intelligent Vietnamese medical chatbot (Medly) using
-                    Retrieval-Augmented Generation (RAG) for accurate and contextually relevant responses, combining
-                    semantic search with large language models.</li>
-                <li><strong>Technologies:</strong> Python, FastAPI, FAISS, SQLite.</li>
-                <li><strong>Team Size:</strong> 2</li>
-                <li><strong>GitHub:</strong> <a
-                        href="https://github.com/leetrunghaau/Medly">https://github.com/leetrunghaau/Medly</a></li>
-
+                <li>Built a Vietnamese medical chatbot using Retrieval-Augmented Generation (RAG).</li>
+                <li>Implemented semantic search using FAISS to retrieve relevant medical knowledge from a custom
+                    dataset.</li>
+                <li>Developed backend APIs using FastAPI to handle user queries and chatbot responses.</li>
+        
             </ul>
+            <strong>Technologies:</strong> Python, FastAPI, FAISS, SQLite.<br>
+            <strong>Team Size:</strong> 2 <br>
+            <strong>GitHub:</strong> <a href="https://github.com/leetrunghaau/Medly">github.com/leetrunghaau/Medly</a>
+            </p>
         </div>
 
+        <div style="margin-bottom: 15px;">
+            <div class="job-header">
+                <h3>Booking Care</h3>
+                <span>May 2025 - Jun 2025</span>
+            </div>
+            <p style="margin-top: 5px;">
+                <strong>Role:</strong> Backend Developer<br>
+            <ul>
+                <li>Developed backend services for a medical appointment booking system using Node.js and Express.</li>
+                <li>Designed RESTful APIs and database models for users, doctors, and appointment management using
+                    MySQL.</li>
+                <li>Structured the backend with a modular architecture and containerized the service with Docker for consistent development and deployment.</li>
+            </ul>
+            <strong>Technologies:</strong> Node.js, Sequelize, MySQL, Docker.<br>
+            <strong>Team Size:</strong> 2 <br>
+            <strong>GitHub:</strong> <a
+                href="https://github.com/leetrunghaau/booking_care_BE">github.com/leetrunghaau/booking_care_BE</a>
+            </p>
+        </div>
 
-
-
+        
     </section>
-
-
-
-
 </body>
 
 </html>
