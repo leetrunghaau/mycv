@@ -14,10 +14,10 @@
   <a href="https://www.facebook.com/hz.7d1">
     <img src="https://img.shields.io/badge/Facebook-Trung%20Hậu-1e293b?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook">
   </a>
-  <a href="./index.html">
+  <a href="https://leetrunghaau.github.io/mycv/">
     <img src="https://img.shields.io/badge/Live%20CV-Open-374151?style=for-the-badge" alt="Live CV">
   </a>
-  <a href="./LeTrungHau_FullStach_CV.pdf">
+  <a href="https://leetrunghaau.github.io/mycv/LeTrungHau_FullStach_CV.pdf">
     <img src="https://img.shields.io/badge/PDF-Download-7c3aed?style=for-the-badge&logo=adobe&logoColor=white" alt="PDF Download">
   </a>
 </p>
